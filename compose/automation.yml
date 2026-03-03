@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: homeassistant
+    network_mode: host
+    volumes:
+      - /home/tiago2609/docker/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - TZ=America/Sao_Paulo
+    restart: unless-stopped
+
+  go2rtc:
+    image: alexxit/go2rtc:latest
+    container_name: go2rtc
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - /home/tiago2609/docker/go2rtc/go2rtc.yaml:/config/go2rtc.yaml
