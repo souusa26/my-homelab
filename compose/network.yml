@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  adguardhome:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    restart: unless-stopped
+    volumes:
+      - /home/tiago2609/docker/adguard/work:/opt/adguardhome/work
+      - /home/tiago2609/docker/adguard/conf:/opt/adguardhome/conf
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+      - "3000:3000/tcp"
+      - "853:853/tcp"
