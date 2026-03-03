@@ -1,8 +1,8 @@
-# 🏠 My Homelab Architecture
+# My Homelab Architecture
 
 Repositório dedicado à documentação da minha infraestrutura pessoal rodando em Ubuntu Server. Este projeto serve como meu ambiente de testes para Docker, automação residencial e gestão de serviços de rede.
 
-## 🛠️ Hardware & SO
+## Hardware & SO
 
 * **Host:** Dell Latitude 3420 (Notebook como servidor)
 * **CPU:** 11th Gen Intel i7-1165G7 (8 cores) @ 4.700GHz
@@ -13,7 +13,7 @@ Repositório dedicado à documentação da minha infraestrutura pessoal rodando 
 
 ---
 
-## 🚀 O Projeto: Motivação e Implementação
+## O Projeto: Motivação e Implementação
 
 Este projeto nasceu com o objetivo de aprimorar minhas habilidades técnicas e otimizar rotinas do dia a dia através da cultura Self-Hosted.
 
@@ -42,7 +42,7 @@ Visando o baixo custo operacional, otimizei o hardware (Notebook Dell) para redu
 Estou à disposição para dúvidas, sugestões de melhorias e troca de experiências sobre infraestrutura e automação!"
 
 ---
-## 📸 Visual Stack & Dashboards
+## Visual Stack & Dashboards
 
 Abaixo, os painéis de controle que utilizo para gerenciar e monitorar o ecossistema do Homelab.
 
@@ -65,7 +65,7 @@ Otimização para controle via smartphone, com foco em usabilidade e acesso ráp
 
 ---
 
-## 🐋 Docker Stack & Services
+## Docker Stack & Services
 
 A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`.
 
@@ -78,7 +78,7 @@ A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`
 
 ---
 
-## 📐 Topologia Lógica (Mermaid)
+## Topologia Lógica (Mermaid)
 
 ```mermaid
 graph TD
