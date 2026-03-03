@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    network_mode: "host"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /home/tiago2609/docker/radarr/config:/config
+      - /var/lib/plexmediaserver/Filmes:/movies
+    restart: unless-stopped
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /home/tiago2609/docker/sonarr/config:/config
+      - /var/lib/plexmediaserver/Series:/tv
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - /home/tiago2609/docker/prowlarr/config:/config
+    ports:
+      - "9696:9696"
+    networks:
+      arr_net:
+        ipv4_address: 172.20.0.10
+    restart: unless-stopped
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - TZ=America/Sao_Paulo
+    networks:
+      arr_net:
+        ipv4_address: 172.20.0.20
+    restart: unless-stopped
+
+networks:
+  arr_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
