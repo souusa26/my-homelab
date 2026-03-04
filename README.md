@@ -104,7 +104,7 @@ graph TD
 
         Prowlarr
 
-        FlareSolverr
+        PlexMediaServer
 
     end
 
@@ -126,6 +126,6 @@ graph TD
 
     Dashboard --> AdGuard
 
-    Prowlarr --> FlareSolverr
+    Prowlarr --> PlexMediaServer
 
-    Radarr & Sonarr --> Prowlarr
+    Radarr & Sonarr --> PlexMediaServer
