@@ -102,7 +102,7 @@ graph TD
 
         Sonarr
 
-        Prowlarr
+        qBitTorrent
 
         PlexMediaServer
 
@@ -126,6 +126,6 @@ graph TD
 
     Dashboard --> AdGuard
 
-    Prowlarr --> PlexMediaServer
+    qBitTorrent --> PlexMediaServer
 
     Radarr & Sonarr --> PlexMediaServer
