@@ -102,6 +102,8 @@ graph TD
 
         Sonarr
 
+        Prowlarr
+
         qBitTorrent
 
         PlexMediaServer
@@ -128,4 +130,6 @@ graph TD
 
     qBitTorrent --> PlexMediaServer
 
-    Radarr & Sonarr --> qBitTorrent
+    Prowlarr --> qBitTorrent
+
+    Radarr & Sonarr --> Prowlarr
