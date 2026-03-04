@@ -65,8 +65,7 @@ Otimização para controle via smartphone, com foco em usabilidade e acesso ráp
 
 ### 5. Processo para incluir midias ao Plex Media Server
 Busco a midia no Radarr ou Sonarr, faço uma busca interativa (escolho qual arquivo quero baixar) o arquivo é encaminhado ao qBitTorrent e após conclusão ao Plex Media Server.
-
-[![Assista o Fluxo no Plex](https://img.youtube.com/vi/9fej6K0q8Vc/maxresdefault.jpg)](https://www.youtube.com/watch?v=9fej6K0q8Vc)
+![Inclusão de midias ao Plex](images/video.gif)
 
 ## Docker Stack & Services
 
