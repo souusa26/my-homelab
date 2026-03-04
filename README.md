@@ -104,7 +104,7 @@ graph TD
 
         Prowlarr
 
-        FlareSolverr
+        PlexMediaServer
 
     end
 
