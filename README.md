@@ -126,6 +126,6 @@ graph TD
 
     Dashboard --> AdGuard
 
-    qBitTorrent --> PlexMediaServer
+    Prowlarr --> FlareSolverr
 
     Radarr & Sonarr --> Prowlarr
