@@ -128,4 +128,4 @@ graph TD
 
     qBitTorrent --> PlexMediaServer
 
-    Radarr & Sonarr --> PlexMediaServer
+    Radarr & Sonarr --> qBitTorrent
