@@ -104,5 +104,5 @@ graph TD
     Dashboard --> HA
     Dashboard --> Radarr
     Dashboard --> AdGuard
-    Prowlarr --> FlareSolverr --> qBitTorrent --> Plex Media Server
+    Prowlarr --> FlareSolverr
     Radarr & Sonarr --> Prowlarr
