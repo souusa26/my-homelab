@@ -126,6 +126,6 @@ graph TD
 
     Dashboard --> AdGuard
 
-    Prowlarr --> FlareSolverr
+    Prowlarr --> PlexMidiaServer
 
     Radarr & Sonarr --> Prowlarr
