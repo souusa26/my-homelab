@@ -129,32 +129,3 @@ graph TD
     Prowlarr --> FlareSolverr
 
     Radarr & Sonarr --> Prowlarr
-        Sonarr
-
-        Prowlarr
-
-        PlexMediaServer
-
-    end
-
-
-
-    subgraph "Automação"
-
-        HA[Home Assistant]
-
-        Go2RTC[Gestão de Câmeras]
-
-    end
-
-
-
-    Dashboard --> HA
-
-    Dashboard --> Radarr
-
-    Dashboard --> AdGuard
-
-    Prowlarr --> PlexMidiaServer
-
-    Radarr & Sonarr --> PlexMidiaServer
