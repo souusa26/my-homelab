@@ -77,6 +77,8 @@ A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`
 | **Dashboard** | Homepage | Interface visual de navegação |
 
 ---
+```mermaid
+
 
 ## Topologia Lógica (Mermaid)
 
