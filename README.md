@@ -80,7 +80,6 @@ A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`
 
 ## Topologia Lógica (Mermaid)
 
-```mermaid
 graph TD
     User((Usuário)) --> Dashboard[Homepage]
     
@@ -90,10 +89,12 @@ graph TD
     end
 
     subgraph "Gestão de Mídia"
-        Radarr
-        Sonarr
-        Prowlarr
-        FlareSolverr
+        Radarr[Radarr - Filmes]
+        Sonarr[Sonarr - Séries]
+        Prowlarr[Prowlarr - Indexer]
+        FlareSolverr[FlareSolverr - Bypass]
+        QBit[qBittorrent - Download]
+        Plex[Plex Media Server - Player]
     end
 
     subgraph "Automação"
@@ -104,5 +105,13 @@ graph TD
     Dashboard --> HA
     Dashboard --> Radarr
     Dashboard --> AdGuard
-    Prowlarr --> FlareSolverr
+    Dashboard --> Plex
+
+    %% Fluxo de Busca e Bypass
     Radarr & Sonarr --> Prowlarr
+    Prowlarr <--> FlareSolverr
+
+    %% Fluxo de Download e Exibição
+    Prowlarr --> QBit
+    QBit -- "Conclui Download" --> Radarr & Sonarr
+    Radarr & Sonarr -- "Move Arquivo" --> Plex
