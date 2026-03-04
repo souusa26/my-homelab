@@ -26,7 +26,7 @@ Infraestrutura de Rede e Segurança
 Com a stack de mídia estabilizada, foquei na otimização da rede. Implementei o AdGuard Home como DNS primário. Com o apoio da comunidade, integrei listas de bloqueio de anúncios e domínios maliciosos. Após configurar o DNS diretamente no roteador da operadora, todos os dispositivos conectados passaram a usufruir de uma navegação mais limpa, segura e privada, eliminando anúncios invasivos em smartphones, TVs e consoles.
 
 Central de Automação com Home Assistant
-O próximo passo foi a centralização via Home Assistant. Integrei dispositivos da linha Tuya (luzes e TVs), além de monitorar o status dos containers Docker (como o progresso de downloads do qBittorrent). Explorei integrações avançadas como:
+O próximo passo foi a centralização via Home Assistant. Integrei dispositivos da linha Tuya, além de monitorar o status dos containers Docker (como o progresso de downloads do qBittorrent). Explorei integrações avançadas como:
 
 Echo Dot: Criação de rotinas e comandos de voz integrados.
 
@@ -34,7 +34,7 @@ OpenRouter (HACS): Implementação de IA para consultas rápidas (ex: receitas c
 
 Spotify Developer: Controle centralizado de reprodução musical em múltiplos dispositivos.
 
-Estratégia de Backup: Estruturei rotinas de backup para Google Drive (via API) e SFTP local. Atualmente, por o sistema estar em estado crítico de estabilidade, realizo esses backups manualmente após cada atualização essencial.
+Estratégia de Backup: Estruturei rotinas de backup para Google Drive (via API), SFTP  e também backup local. Atualmente o backup completo do servidor, por o sistema estar em estado crítico de estabilidade, realizo esses backups manualmente após cada atualização essencial.
 
 Eficiência Energética
 Visando o baixo custo operacional, otimizei o hardware (Notebook Dell) para reduzir o consumo elétrico. O servidor opera com uma média de 9.32 Watts/h, elevando-se para a faixa de 12-16 Watts/h durante o uso ativo de transcodificação no Plex, mantendo o projeto sustentável e eficiente.
