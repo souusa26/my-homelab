@@ -129,7 +129,3 @@ graph TD
     Prowlarr --> FlareSolverr
 
     Radarr & Sonarr --> Prowlarr
-    %% Fluxo de Download e Exibição
-    Prowlarr --> QBit
-    QBit -- "Conclui Download" --> Radarr & Sonarr
-    Radarr & Sonarr -- "Move Arquivo" --> Plex
