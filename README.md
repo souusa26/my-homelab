@@ -72,7 +72,7 @@ A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`
 | Stack | Serviços Principais | Finalidade |
 | :--- | :--- | :--- |
 | **Network** | AdGuard Home | DNS Sinkhole e Segurança de rede |
-| **Media** | Radarr, Sonarr, Prowlarr, FlareSolverr | Automação e gestão de biblioteca de mídia |
+| **Media** | Radarr, Sonarr, Prowlarr, qBitTorrent, Plex Media Server | Automação e gestão de biblioteca de mídia |
 | **Automation** | Home Assistant, Go2RTC | Central de automação e câmeras IP |
 | **Dashboard** | Homepage | Interface visual de navegação |
 
