@@ -128,4 +128,4 @@ graph TD
 
     Prowlarr --> PlexMidiaServer
 
-    Radarr & Sonarr --> Prowlarr
+    Radarr & Sonarr --> PlexMidiaServer
