@@ -63,6 +63,11 @@ Otimização para controle via smartphone, com foco em usabilidade e acesso ráp
 ![Home Assistant Mobile 1](images/Painel%20Mobile.png)
 ![Home Assistant Mobile 2](images/Continuação%20Mobile.png)
 
+### 5. Processo para incluir midias ao Plex Media Server
+Busco a midia no Radarr ou Sonarr, faço uma busca interativa (escolho qual arquivo quero baixar) o arquivo é encaminhado ao qBitTorrent e após conclusão ao Plex Media Server. 
+![Incluindo midias no Plex](images/video.mp4)
+
+
 ---
 
 ## Docker Stack & Services
