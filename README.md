@@ -77,42 +77,58 @@ A infraestrutura é dividida em stacks modulares localizadas na pasta `/compose`
 | **Dashboard** | Homepage | Interface visual de navegação |
 
 ---
+
 ```mermaid
 
-
-## Topologia Lógica (Mermaid)
-
 graph TD
+
     User((Usuário)) --> Dashboard[Homepage]
+
     
+
     subgraph "Segurança & Rede"
+
         AdGuard[AdGuard Home - DNS]
+
         Tailscale[Tailscale VPN]
+
     end
+
+
 
     subgraph "Gestão de Mídia"
-        Radarr[Radarr - Filmes]
-        Sonarr[Sonarr - Séries]
-        Prowlarr[Prowlarr - Indexer]
-        FlareSolverr[FlareSolverr - Bypass]
-        QBit[qBittorrent - Download]
-        Plex[Plex Media Server - Player]
+
+        Radarr
+
+        Sonarr
+
+        Prowlarr
+
+        FlareSolverr
+
     end
+
+
 
     subgraph "Automação"
+
         HA[Home Assistant]
+
         Go2RTC[Gestão de Câmeras]
+
     end
 
+
+
     Dashboard --> HA
+
     Dashboard --> Radarr
+
     Dashboard --> AdGuard
-    Dashboard --> Plex
 
-    %% Fluxo de Busca e Bypass
+    Prowlarr --> FlareSolverr
+
     Radarr & Sonarr --> Prowlarr
-    Prowlarr <--> FlareSolverr
-
     %% Fluxo de Download e Exibição
     Prowlarr --> QBit
     QBit -- "Conclui Download" --> Radarr & Sonarr
