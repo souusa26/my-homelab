@@ -7,7 +7,7 @@ Repositório dedicado à documentação da minha infraestrutura pessoal rodando 
 * **Host:** Dell Latitude 3420 (Notebook como servidor)
 * **CPU:** 11th Gen Intel i7-1165G7 (8 cores) @ 4.700GHz
 * **RAM:** 16GB DDR4
-* **Armazenamento:** 500GB SSD NVMe
+* **Armazenamento:** 500GB SSD NVMe, 500GB HD
 * **SO:** Ubuntu 24.04.3 LTS (Noble Numbat)
 * **Kernel:** 6.8.0-101-generic
 
