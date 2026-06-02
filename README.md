@@ -135,3 +135,51 @@ graph TD
     Prowlarr --> qBitTorrent
 
     Radarr & Sonarr --> Prowlarr
+```
+
+---
+
+## Discord Bot
+
+Além da automação tradicional, desenvolvi um bot privado no Discord focado no gerenciamento remoto e monitoramento em tempo real de toda a infraestrutura do Homelab. Ele permite acompanhar a saúde do servidor e executar comandos essenciais diretamente pelo chat de forma segura.
+
+### Recursos Principais
+* **Monitoramento do Host:** Acompanhamento dinâmico de uso de CPU, memória RAM, armazenamento em disco e temperatura.
+* **Gestão de Containers e Serviços:** Controle direto de containers Docker e serviços gerenciados pelo `systemd`.
+* **Métricas de Energia:** Monitoramento contínuo do consumo elétrico integrado via `powerstat`.
+* **Alertas & Health Checks:** Notificações proativas sobre o status de integridade e estabilidade do ecossistema.
+
+### Serviços Integrados
+O bot está homologado para interagir e monitorar os principais componentes da stack:
+* **Infraestrutura & SO:** Docker, Systemd, Ubuntu Server 24.04 LTS
+* **Mídia & Automação:** Plex Media Server, qBittorrent, Radarr, Sonarr, Prowlarr, Lidarr, FlareSolverr
+* **Rede & Casa Inteligente:** Home Assistant, AdGuard Home
+
+### Comandos Disponíveis
+
+| Categoria | Comando | Descrição / Finalidade |
+| :--- | :--- | :--- |
+| **Informativos** | `!server` | Exibe o status geral e uso de recursos do servidor |
+| | `!docker` | Lista a situação atual dos containers Docker |
+| | `!compose` | Verifica o status dos serviços via Docker Compose |
+| | `!ip` | Retorna os endereços de IP atuais do host |
+| | `!temp` | Monitora a temperatura dos componentes de hardware |
+| | `!health` | Executa um check-up geral de integridade do sistema |
+| | `!power` | Exibe o consumo energético aferido em tempo real |
+| | `!status <serviço>` | Consulta o estado específico de um serviço ou container |
+| **Controle** | `!start <serviço>` | Inicia o serviço ou container especificado |
+| | `!stop <serviço>` | Interrompe o serviço ou container especificado |
+| | `!restart <serviço>` | Reinicia o serviço ou container especificado |
+| | `!reboot` | Realiza o reboot controlado do servidor físico |
+
+### Segurança e Isolamento
+Considerando que o bot possui interface com comandos do sistema, foram implementadas rigorosas camadas de proteção:
+* **Autenticação por ID:** Restrição estrita baseada em *Discord User ID* (apenas usuários homologados conseguem interagir).
+* **Segregação de Canais:** Um canal dedicado exclusivamente para a execução de comandos e outro separado focado apenas no recebimento de alertas automáticos.
+* **Privilégios Mínimos:** Configuração de permissões `sudo` estritamente limitadas aos comandos que o bot realmente necessita para operar.
+* **Ambiente Isolado:** Execução dentro de um ambiente virtual Python (`venv`), isolado do escopo global do sistema operacional.
+
+### Stack Utilizada
+* **Linguagem Base:** Python
+* **Framework Principal:** `discord.py`
+* **Bibliotecas & Ferramentas:** `psutil`, `powerstat`, `Docker`, `systemd`
