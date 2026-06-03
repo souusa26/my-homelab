@@ -60,8 +60,8 @@ Interface administrativa para controle de iluminação, dispositivos inteligente
 
 ### 4. Interface Mobile (Home Assistant)
 Otimização para controle via smartphone, com foco em usabilidade e acesso rápido.
-![Home Assistant Mobile 1](images/Painel%20Mobile.png)
-![Home Assistant Mobile 2](images/Continuação%20Mobile.png)
+![Home Assistant Mobile 1](images/Painel%20Mobile1.png)
+![Home Assistant Mobile 2](images/Continuação%20Mobile1.png)
 
 ### 5. Processo para incluir midias ao Plex Media Server
 Busco a midia no Radarr ou Sonarr, faço uma busca interativa (escolho qual arquivo quero baixar) o arquivo é encaminhado ao qBitTorrent e após conclusão ao Plex Media Server.
